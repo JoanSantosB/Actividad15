@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "eje.4": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
