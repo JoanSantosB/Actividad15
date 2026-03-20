@@ -11,7 +11,7 @@ if (cantidad > 0)
         int codigo = int.Parse(Console.ReadLine());
         if (productos.ContainsKey(codigo))
         {
-            Console.WriteLine("Ya existe este código, ingrese otro");
+            Console.WriteLine("Ya existe este código, ingrese otro");  
             i--;
         }
         else
