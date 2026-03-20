@@ -30,7 +30,7 @@ do
                 {
                     Producto p = new Producto();
                     Console.WriteLine($"\tProducto {i + 1}");
-                    Console.Write("Ingrese el código: ");
+                    Console.Write("Ingrese el código: "); 
                     int codigo = int.Parse(Console.ReadLine());
                     if (productos.ContainsKey(codigo))
                     {
