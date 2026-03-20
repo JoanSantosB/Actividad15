@@ -54,7 +54,7 @@ if (cantidad > 0)
         if(productos[buscar].Precio > 0)
         {
             Console.WriteLine("Ingrese la cantidad: ");
-            productos[buscar].Cantidad= int.Parse(Console.ReadLine());
+            productos[buscar].Cantidad= int.Parse(Console.ReadLine()); 
             if (productos[buscar].Cantidad > 0)
             {
                 productos.Add(buscar, p);
