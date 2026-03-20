@@ -43,7 +43,7 @@ if (cantidad > 0)
     }
     Console.WriteLine();
     Console.Write("Ingrese el codigo del producto que desea modificar: ");
-    int buscar = int.Parse(Console.ReadLine());
+    buscar = int.Parse(Console.ReadLine());
     if (productos.ContainsKey(buscar))
     {
         Producto p = new Producto();
@@ -77,7 +77,7 @@ if (cantidad > 0)
 }
 else
 {
-    Console.WriteLine("La cantidad debe ser mayor que 0");
+    Console.WriteLine("La cantidad debe ser mayor O I 0");
 }
 class Producto
 {

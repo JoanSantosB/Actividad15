@@ -40,13 +40,6 @@ if (cantidad > 0)
             }
         }
     }
-    Console.WriteLine();
-    Console.WriteLine("\tPRODUCTOS GUARDADOS");
-    foreach(KeyValuePair<int,Producto> k in productos)
-    {
-        Console.Write($"Código: {k.Key} | ");
-        k.Value.MostrarInformacion();
-    }
 }
 else
 {
