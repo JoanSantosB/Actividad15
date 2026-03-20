@@ -50,6 +50,7 @@ do
                             if (p.Cantidad >= 0)
                             {
                                 productos.Add(codigo, p);
+                                Console.WriteLine("Producto guardado");
                             }
                             else
                             {
@@ -89,6 +90,7 @@ do
                         if (productos[buscar].Cantidad >= 0)
                         {
                             productos.Add(buscar, p);
+                            Console.WriteLine("Producto modificado");
                         }
                         else
                         {
@@ -115,7 +117,7 @@ do
                 {
                     Producto p = new Producto();
                     productos.Remove(buscar);
-                    Console.WriteLine("Se ha elilminda conrrectamente");
+                    Console.WriteLine("Se ha elilminado conrrectamente");
                 }
                 else
                 {
@@ -130,7 +132,7 @@ do
         case 4:
             if (productos.Count > 0)
             {
-                Console.Write("Ingrese el codigo del producto que desea modificar: ");
+                Console.Write("Ingrese el codigo del producto que desea ver: ");
                 int buscar = int.Parse(Console.ReadLine());
                 if (productos.ContainsKey(buscar))
                 {
@@ -149,6 +151,7 @@ do
         case 5:
             if (productos.Count > 0)
             {
+                Console.WriteLine("\tTodos los productos guardados");
                 foreach (KeyValuePair<int, Producto> k in productos)
                 {
                     Console.Write($"Codigo: {k.Key} | ");
@@ -172,15 +175,16 @@ do
                     int c = int.Parse(Console.ReadLine());
                     if (c > 0)
                     {
-                        if (c > p.Cantidad)
-                        {
-                            Console.WriteLine("No hay cantidad suficiente");
-                        }
-                        else
+                        if (c <= p.Cantidad)
                         {
                             double descueto = p.CalculoSub() * 0.05;
                             Console.WriteLine($"Decuento: {descueto}");
                             Console.WriteLine($"Subtotal: {p.CalculoSub()}");
+                            
+                        }
+                        else
+                        {
+                            Console.WriteLine("No hay cantidad suficiente");
                         }
                     }
                     else
