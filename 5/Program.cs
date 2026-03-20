@@ -17,7 +17,7 @@ do
     Console.WriteLine("9. Mostrar el producto con menor existencia");
     Console.WriteLine("10. Mostrar el valor total del inventario");
     Console.WriteLine("11. Salir");
-    Console.Write("Seleccione una opcion; ");
+    Console.Write("Seleccione una opcion: ");
     opcion= int.Parse(Console.ReadLine());
     switch (opcion)
     {
@@ -234,14 +234,20 @@ do
         case 8:
             if (productos.Count > 0)
             {
-                Producto mayor=productos[0];
-                foreach(KeyValuePair<int,Producto> i in productos)
+                Producto mayor = new Producto();
+                foreach (KeyValuePair<int, Producto> i in productos)
+                {
+                    mayor=i.Value;
+                    break;
+                }
+                foreach (KeyValuePair<int,Producto> i in productos)
                 {
                     if (i.Value.Precio > mayor.Precio)
                     {
                         mayor = i.Value;
                     }
                 }
+
                 Console.WriteLine("El producto con mayor precio es:");
                 mayor.MostrarInformacion();
             }
@@ -253,7 +259,12 @@ do
         case 9:
             if (productos.Count > 0)
             {
-                Producto menor = productos[0];
+                Producto menor = new Producto();
+                foreach (KeyValuePair<int, Producto> i in productos)
+                {
+                    menor = i.Value;
+                    break;
+                }
                 foreach (KeyValuePair<int, Producto> i in productos)
                 {
                     if (i.Value.CalculoSub()<menor.CalculoSub())
