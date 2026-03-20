@@ -5,6 +5,7 @@ Dictionary<int, Producto> productos = new Dictionary<int, Producto>();
 int opcion=0;
 do
 {
+    Console.Clear();
     Console.WriteLine("1. Agregue productos");
     Console.WriteLine("2. Mostrar producto");
     Console.WriteLine("3. Eliminar producto");
@@ -286,6 +287,7 @@ do
             Console.WriteLine("Esta opcion no existe");
             break;
     }
+    Console.ReadKey();
 } while (opcion != 11) ;
 class Producto
 {
